@@ -12,6 +12,11 @@ end
 def create
     User.create(user_params)
   end
+
+#詳細情報を表示させるためのアクション
+def show
+  @user = User.find(params[:id])
+end
 #削除をするためのアクション
 def destroy
     user = User.find(params[:id])
